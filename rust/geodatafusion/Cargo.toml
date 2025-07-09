@@ -12,10 +12,12 @@ rust-version = { workspace = true }
 
 [dependencies]
 arrow-array = { workspace = true }
+geo = { workspace = true }
 arrow-schema = { workspace = true }
 datafusion = { workspace = true }
 geoarrow-array = { workspace = true }
 geoarrow-schema = { workspace = true }
+geoarrow-geo = { workspace = true }
 geohash = { workspace = true }
 thiserror = { workspace = true }
 wkt = { workspace = true }

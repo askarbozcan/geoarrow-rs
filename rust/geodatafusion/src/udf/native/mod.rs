@@ -4,7 +4,8 @@
 // mod bounding_box;
 pub mod constructors;
 pub mod io;
-// mod measurement;
+pub mod predicates;
+//mod measurement;
 // mod processing;
 
 // use datafusion::prelude::SessionContext;
