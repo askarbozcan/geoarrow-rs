@@ -44,6 +44,10 @@ pub(crate) fn GEOMETRY_TYPE() -> GeoArrowType {
 }
 
 pub(crate) fn any_single_geometry_type_input() -> Signature {
+    any_geometry_type_input(1)
+}
+
+pub(crate) fn any_geometry_type_input(arg_count: usize) -> Signature {
     let mut valid_types = vec![];
 
     for coord_type in [CoordType::Separated, CoordType::Interleaved] {
@@ -108,7 +112,7 @@ pub(crate) fn any_single_geometry_type_input() -> Signature {
         valid_types.push(BoxType::new(dim, Default::default()).data_type());
     }
 
-    Signature::uniform(1, valid_types, Volatility::Immutable)
+    Signature::uniform(arg_count, valid_types, Volatility::Immutable)
 }
 
 /// This will not cast a PointArray to a GeometryArray
